@@ -34,10 +34,10 @@ We created two Azure Data Factory pipelines to ingest raw data into the **Bronze
 1. `GitToBronze`: Pulls 3 files directly from GitHub and lands them into the Bronze container.
 2. `DataLakeIngestion`: Pulls 1 file from an Azure Data Lake source into the Bronze layer.
 
-📸 Git to Bronze Pipeline  
+### 📸 Git to Bronze Pipeline  
 ![Git to Bronze Pipeline](assets/adf_pipeline_screenshots/GitToBronze.png)
 
-📸 Data Lake Ingestion Pipeline  
+### 📸 Data Lake Ingestion Pipeline  
 ![Data Lake Ingestion](assets/adf_pipeline_screenshots/DataLakeIngestion.png)
 
 ---
@@ -50,7 +50,7 @@ We used **Azure Databricks** and **PySpark** to process raw data from the Bronze
 - Performed joins, type casting, and null filtering.
 - Stored curated data in Silver tables using **managed Unity Catalog databases**.
 
-📸 Bronze to Silver Workflow  
+### 📸 Bronze to Silver Workflow  
 ![Bronze to Silver Workflow](assets/databricks_dlt_screenshots/WorkflowBronzeToSilver.png)
 
 ---
@@ -63,7 +63,7 @@ We used **Delta Live Tables (DLT)** for real-time curation from Silver to Gold.
 - Applied **data quality checks** using `expect_or_drop()` to handle bad records.
 - Final curated tables are saved in the **Gold layer** for downstream analytics.
 
-📸 DLT Pipeline  
+### 📸 DLT Pipeline  
 ![DLT Pipeline](assets/databricks_dlt_screenshots/DLT_Pipeline.png)
 
 ---
